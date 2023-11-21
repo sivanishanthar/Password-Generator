@@ -3,9 +3,15 @@ Randomly generate a password that meets certain criteria, so that I can create a
 
 # Description
 
+This webpage uses to generate a password using JavaScript with specific criteria such as the number of characters and the inclusion of numbers, lowercase letters, uppercase letters, and special characters.
+
 # Installation
 
+You don't need to install anything. You can open any browser on your computer.
+
 # Usage
+
+This web application is use for to genrate password
 
 # Link to deployed application
 

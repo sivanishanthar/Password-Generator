@@ -7,11 +7,11 @@ This webpage uses to generate a password using JavaScript with specific criteria
 
 # Installation
 
-You don't need to install anything. You can open any browser on your computer.
+You don't need to install anything. You can open this in any browser on your computer.
 
 # Usage
 
-This web application is use for to genrate password
+This web application is used for to genrate password
 
 # Link to deployed application
 

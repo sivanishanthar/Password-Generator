@@ -82,7 +82,7 @@ function generatePassword() {
   ];
 
   // Get the password length from the user
-  const passwordLength = parseInt(
+  passwordLength = parseInt(
     window.prompt(
       "How many characters do you want the password to contain? | This require a number beween 8 and 128"
     )
@@ -121,84 +121,25 @@ function generatePassword() {
   // initialize an array for password
   var includeInPassword = [];
 
-  //number - A | uppercase - B | lowercase - C | sspecial character - D
-
-  //User select all the choices ABCD
-  if (
-    confirmNumber &&
-    confirmUpperCase &&
-    confirmLowerCase &&
-    confirmSpecialCharacters
-  ) {
-    includeInPassword = numbers.concat(
-      upperCase,
-      lowerCase,
-      specialCharacters
-    );
+  //Getting user choices
+  if (confirmNumber) {
+    includeInPassword = includeInPassword.concat(numbers);
   }
-  //User select number, uppercase, and lowercase ABC
-  else if (confirmNumber && confirmUpperCase && confirmLowerCase) {
-    includeInPassword = numbers.concat(upperCase, lowerCase);
+  if (confirmUpperCase) {
+    includeInPassword = includeInPassword.concat(upperCase);
   }
-  //User select number, upppercase, and special characters ABD
-  else if (confirmNumber && confirmUpperCase && confirmSpecialCharacters) {
-    includeInPassword = numbers.concat(upperCase, specialCharacters);
+  if (confirmLowerCase) {
+    includeInPassword = includeInPassword.concat(lowerCase);
   }
-  //User select number, lowercase, and special characters ACD
-  else if ((confirmNumber, confirmLowerCase, confirmSpecialCharacters)) {
-    includeInPassword = numbers.concat(lowerCase, specialCharacters);
-  }
-  //User select uppercase, lowercase, and special characters BCD
-  else if ((confirmUpperCase, confirmLowerCase, confirmSpecialCharacters)) {
-    includeInPassword = upperCase.concat(lowerCase, specialCharacters);
-  }
-  //User select number, and uppercase AB
-  else if (confirmNumber && confirmUpperCase) {
-    includeInPassword = numbers.concat(upperCase);
-  }
-  //User select number and lowercase AC
-  else if (confirmNumber && confirmLowerCase) {
-    includeInPassword = numbers.concat(lowerCase);
-  }
-  //User select number and special characters AD
-  else if (numbers && specialCharacters) {
-    includeInPassword = numbers.concat(specialCharacters);
-  }
-  //User slect uppercase and lowercase BC
-  else if (confirmLowerCase && confirmUpperCase) {
-    includeInPassword = upperCase.concat(lowerCase);
-  }
-  //User select uppercase and special characters BD
-  else if (confirmUpperCase && confirmSpecialCharacters) {
-    includeInPassword = upperCase.concat(specialCharacters);
-  }
-  //User select lowercase and special character CD
-  else if (confirmLowerCase && confirmSpecialCharacters) {
-    includeInPassword = lowerCase.concat(specialCharacters);
-  }
-  //User select number only A
-  else if (confirmNumber) {
-    includeInPassword = numbers;
-  }
-  //User select uppercase only B
-  else if (confirmUpperCase) {
-    includeInPassword = upperCase;
-  }
-  //User select lowercase C
-  else if (confirmLowerCase) {
-    includeInPassword = lowerCase;
-  }
-  //User select special character only D
-  else {
-    includeInPassword = specialCharacters;
+  if (confirmSpecialCharacters) {
+    includeInPassword = includeInPassword.concat(specialCharacters);
   }
 
-  console.log(includeInPassword.length);
-
+  //Building password
   var buildPW = [];
-  for(var i = 0; i < passwordLength; i++){
+  for (var i = 0; i < passwordLength; i++) {
     var randomBuild = Math.floor(Math.random() * includeInPassword.length);
-    buildPW.push(randomBuild);
+    buildPW.push(includeInPassword[randomBuild]);
   }
 
   buildPW.toString();

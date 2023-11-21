@@ -130,8 +130,7 @@ function generatePassword() {
     confirmLowerCase &&
     confirmSpecialCharacters
   ) {
-    includeInPassword = concat(
-      numbers,
+    includeInPassword = numbers.concat(
       upperCase,
       lowerCase,
       specialCharacters
@@ -139,60 +138,62 @@ function generatePassword() {
   }
   //User select number, uppercase, and lowercase ABC
   else if (confirmNumber && confirmUpperCase && confirmLowerCase) {
-    includeInPassword = concat(numbers, upperCase, lowerCase);
+    includeInPassword = numbers.concat(upperCase, lowerCase);
   }
   //User select number, upppercase, and special characters ABD
   else if (confirmNumber && confirmUpperCase && confirmSpecialCharacters) {
-    includeInPassword = concat(numbers, upperCase, specialCharacters);
+    includeInPassword = numbers.concat(upperCase, specialCharacters);
   }
   //User select number, lowercase, and special characters ACD
   else if ((confirmNumber, confirmLowerCase, confirmSpecialCharacters)) {
-    includeInPassword = concat(numbers, lowerCase, specialCharacters);
+    includeInPassword = numbers.concat(lowerCase, specialCharacters);
   }
   //User select uppercase, lowercase, and special characters BCD
   else if ((confirmUpperCase, confirmLowerCase, confirmSpecialCharacters)) {
-    includeInPassword = concat(upperCase, lowerCase, specialCharacters);
+    includeInPassword = upperCase.concat(lowerCase, specialCharacters);
   }
   //User select number, and uppercase AB
   else if (confirmNumber && confirmUpperCase) {
-    includeInPassword = concat(numbers, upperCase);
+    includeInPassword = numbers.concat(upperCase);
   }
   //User select number and lowercase AC
   else if (confirmNumber && confirmLowerCase) {
-    includeInPassword = concat(numbers, lowerCase);
+    includeInPassword = numbers.concat(lowerCase);
   }
   //User select number and special characters AD
   else if (numbers && specialCharacters) {
-    includeInPassword = concat(numbers, specialCharacters);
+    includeInPassword = numbers.concat(specialCharacters);
   }
   //User slect uppercase and lowercase BC
   else if (confirmLowerCase && confirmUpperCase) {
-    includeInPassword = concat(upperCase, lowerCase);
+    includeInPassword = upperCase.concat(lowerCase);
   }
   //User select uppercase and special characters BD
   else if (confirmUpperCase && confirmSpecialCharacters) {
-    includeInPassword = concat(upperCase, specialCharacters);
+    includeInPassword = upperCase.concat(specialCharacters);
   }
   //User select lowercase and special character CD
   else if (confirmLowerCase && confirmSpecialCharacters) {
-    includeInPassword = concat(lowerCase, specialCharacters);
+    includeInPassword = lowerCase.concat(specialCharacters);
   }
   //User select number only A
   else if (confirmNumber) {
-    includeInPassword = concat(numbers);
+    includeInPassword = numbers;
   }
   //User select uppercase only B
   else if (confirmUpperCase) {
-    includeInPassword = concat(upperCase);
+    includeInPassword = upperCase;
   }
   //User select lowercase C
   else if (confirmLowerCase) {
-    includeInPassword = concat(lowerCase);
+    includeInPassword = lowerCase;
   }
   //User select special character only D
   else {
-    includeInPassword = concat(specialCharacters);
+    includeInPassword = specialCharacters;
   }
+
+  console.log(includeInPassword.length);
 
   var buildPW = [];
   for(var i = 0; i < passwordLength; i++){

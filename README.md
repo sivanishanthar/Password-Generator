@@ -14,10 +14,10 @@ You don't need to install anything. You can open this in any browser on your com
 This web application is used for to genrate password
 
 [Overview](Develop/image/ScreeshotOverview.png)
-![Ask Lenght](Develop/image/ScreenshotAskLength.png)
+[Ask Lenght](Develop/image/ScreenshotAskLength.png)
 [Enter length](Develop/image/ScreenshotEnterLength.png)
-![Ask choice](Develop/image/ScreenshotAskChoice.png)
-![Generated password](Develop/image/ScreenshotGeneratedPW.png)
+[Ask choice](Develop/image/ScreenshotAskChoice.png)
+[Generated password](Develop/image/ScreenshotGeneratedPW.png)
 
 
 

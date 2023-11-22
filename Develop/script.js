@@ -83,14 +83,14 @@ function generatePassword() {
   ];
 
   // Get the password length from the user
-  passwordLength = parseInt(
+   passwordLength = parseInt(
     window.prompt(
       "How many characters do you want the password to contain? | This require a number beween 8 and 128"
     )
   );
 
   //Get the lenght from the user's password and loopin till get the right length
-  while (passwordLength > 128 || passwordLength < 8) {
+  while (passwordLength > 128 || passwordLength < 8 || !passwordLength) {
     alert(
       "Password lenght must greater than or equal to 8 and leass than or equal to 128"
     );

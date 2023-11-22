@@ -2,6 +2,7 @@
 
 // generatePassword function
 function generatePassword() {
+  //Declaration of variables
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var upperCase = [
     "A",
@@ -159,3 +160,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Siva Ramachandran | Challenge - 03

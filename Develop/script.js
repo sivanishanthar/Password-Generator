@@ -116,7 +116,7 @@ function generatePassword() {
     !confirmLowerCase &&
     !confirmSpecialCharacters
   ) {
-    alert("You must select or click OK to at least one choice..!");
+    alert("You must select at least one of the choices in order to build your password..!");
   }
 
   // initialize an array for password
